@@ -9,7 +9,7 @@
 
 This repository contains my personal Hyprland configuration, designed for a highly productive, keyboard-driven workflow with a clean, modern aesthetic inspired by Gruvbox and Nord themes.
 
-<img src="res/hyprand.png" />
+<img src="res/hyprland.png" />
 
 ## Goals & Philosophy
 
