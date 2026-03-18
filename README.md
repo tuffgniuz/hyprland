@@ -1,88 +1,84 @@
 <div align="center">
 <img src="res/icon.png" />
 
-# CHADLAND (Hyprland Config)
+# Hyprland Configuration
 
-**Welcome to the blazingly fast, keyboard-centric, absolute gigachad Hyprland configuration.**
+**A streamlined, keyboard-centric, and performance-focused Hyprland setup.**
 
 </div>
 
-Look, if you're out here clicking around with a mouse like it's 2005, we have a problem. This config is built for speed, efficiency, and a workflow so smooth it'll make you want to rewrite your entire life in Rust (btw).
-
-We are talking full Vim motions, dedicated scratchpads, Ghostty terminal, and a visual aesthetic that is just... *chef's kiss*. Let's gooooo!
+This configuration is built for speed, efficiency, and a seamless developer workflow. It emphasizes keyboard-driven navigation with Vim-style motions, dedicated scratchpads for multitasking, and a clean, modern aesthetic that stays out of your way.
 
 <img src="res/hyprland.png" />
 
-## 🚀 The Philosophy
+## 🚀 Philosophy
 
-1.  **Vim Motions Everywhere:** If my hands leave the home row, something went terribly wrong. `h j k l` is the only way to navigate.
-2.  **Blazingly Fast Apps:** We use **Ghostty** because it's fast. We use **Yazi** because it's fast. We don't wait for things to render.
-3.  **Special Workspaces:** Stop cluttering your main views. Throw your notes, scratchpads, and background apps into `slot1`, `slot2`, or `slot3`. Out of sight, but one keystroke away.
-4.  **Aesthetics:** Gruvbox, Nord, Rozejin... we have themes that actually look good. No more default anime mascots.
+1.  **Home Row Focus:** Minimize hand movement by using `h j k l` for all window management and navigation.
+2.  **Performance-Driven Apps:** Every tool in this stack—from **Ghostty** to **Yazi**—is chosen for its speed and low latency.
+3.  **Organized Multitasking:** Use special workspaces (`slot1`, `slot2`, `slot3`) to keep persistent tools like notes, databases, or scratchpads just one keystroke away.
+4.  **Dynamic Theming:** Switch between curated themes like `Rozejin`, `Gruvbox`, or `Nord` instantly to suit your environment.
 
-## 🛠️ The Stack (You need this)
+## 🛠️ The Stack
 
-*   **Terminal:** [Ghostty](https://ghostty.org/) (The only correct answer)
-*   **File Manager:** [Yazi](https://github.com/sxyazi/yazi) (Blazingly fast terminal file manager)
+*   **Terminal:** [Ghostty](https://ghostty.org/) (High-performance, GPU-accelerated)
+*   **File Manager:** [Yazi](https://github.com/sxyazi/yazi) (Blazingly fast terminal-based file manager)
 *   **Launcher / Clipboard:** Rofi + cliphist
-*   **Browser:** Firefox (with Vimium, obviously)
+*   **Browser:** Firefox (Optimized for keyboard use)
 
-## ⌨️ Keybindings (The Chad Way)
+## ⌨️ Essential Keybindings
 
-Your `Super` / `Mod` key is your new best friend.
+Your `Super` / `Mod` key is the primary modifier for all actions.
 
 | Action | Keybinding |
 | :--- | :--- |
-| **Launch Ghostty** | `Super + Enter` |
-| **Launch Yazi** | `Super + E` |
+| **Launch Terminal** | `Super + Enter` |
+| **Launch File Manager** | `Super + E` |
 | **App Launcher (Rofi)** | `Super + R` |
 | **Clipboard History** | `Super + V` |
-| **Kill Window** | `Super + Shift + C` |
+| **Kill Active Window** | `Super + Shift + C` |
 | **Vim Focus Move** | `Super + h/j/k/l` |
 | **Vim Window Move** | `Super + Shift + h/j/k/l` |
-| **Toggle Floating** | `Super + Shift + Space` (Auto-centers and resizes!) |
+| **Toggle Floating** | `Super + Shift + Space` (Auto-centers and resizes) |
 | **Special Scratchpads** | `Super + S` (Slot 1), `Super + A` (Slot 2), `Super + D` (Slot 3) |
-| **Screenshot (Save & Copy)** | `Super + Shift + P` (Select area) or `Super + P` (Full screen) |
+| **Screenshots** | `Super + Shift + P` (Region) or `Super + P` (Full) |
 
-## 🎨 Theming (Look Good, Code Better)
+## 🎨 Theming System
 
-We don't just use one theme and cry when we get bored. We have a dynamic theming system.
+This setup features a dynamic theming system that applies configurations for Hyprland, Waybar, and wallpapers simultaneously.
 
-**Available Themes:** `gruvbox`, `nord`, `rozejin`
+**Available Themes:** `rozejin`, `gruvbox`, `nord`
 
-### How to apply a theme:
-
-Just run the provided scripts. It copies the config, reloads Hyprland, and restarts your wallpaper.
+### Applying a Theme:
 
 ```bash
-# Apply just to Hyprland
+# Apply a theme to Hyprland only
 ./scripts/apply-hypr-theme.sh rozejin
 
-# Apply to Hyprland AND Waybar (if you have matching Waybar themes)
+# Apply to Hyprland and Waybar together
 ./scripts/apply-desktop-theme.sh gruvbox
 ```
 
-### Make it Global:
+### Global Commands:
 
-Want to switch themes from anywhere without typing paths like a peasant? Install the global commands:
+You can install global commands to switch themes from anywhere in your terminal:
 
 ```bash
 ./scripts/install-hypr-theme-command.sh
 ./scripts/install-desktop-theme-command.sh
 
-# Now you can just do this from anywhere:
+# Usage:
 hypr-theme nord
-apply-desktop-theme gruvbox
+apply-desktop-theme rozejin
 ```
 
-### Create Your Own:
+### Customization:
 
-1. Copy `themes/gruvbox` to `themes/<your-theme-name>`.
-2. Edit `style.conf`, `hyprlock.conf`, and `hyprpaper.conf` in that folder.
-3. Apply it: `hypr-theme <your-theme-name>`.
+1. Copy an existing theme from `themes/` to a new directory.
+2. Modify `style.conf`, `hyprlock.conf`, and `hyprpaper.conf` as needed.
+3. Apply it using the scripts above.
 
-## 🤝 Use my Configs
+## 🤝 Usage & Contributions
 
-Fork it. Clone it. Steal it. Just don't blame me if you become too productive and your boss expects 10x the output. 
+Feel free to fork this repository and adapt it to your needs. If you encounter any issues or have improvements to suggest, please open an issue or submit a pull request.
 
-*If you find a bug, fix it and send a PR. Or just complain on the internet. Your call.*
+*Developed and maintained for a better Linux desktop experience.*
